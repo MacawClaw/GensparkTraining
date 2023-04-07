@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"> <!-- bean definitions here -->
+
+        <context:component-scan base-package="org.genspark"/>
+
+<!--    <bean id="Student" class="org.genspark.Student">-->
+<!--        <property name="id" value="10"/>-->
+<!--        <property name="name" value="Clark Kent"/>-->
+<!--        <property name="ph">-->
+<!--            <list>-->
+<!--                <ref bean="Phone1"/>-->
+<!--                <ref bean="Phone2"/>-->
+<!--            </list>-->
+<!--        </property>-->
+<!--        <property name="ad" ref="Address"/>-->
+<!--    </bean>-->
+
+<!--    <bean id="Address" class="org.genspark.Address">-->
+<!--        <property name="city" value="Smallville"/>-->
+<!--        <property name="state" value="Kansas"/>-->
+<!--        <property name="country" value="United States of America"/>-->
+<!--        <property name="zipCode" value="66000"/>-->
+<!--    </bean>-->
+
+<!--    <bean id = "Phone1" class="org.genspark.Phone">-->
+<!--        <property name="mobile" value="555-555-5555"/>-->
+<!--    </bean>-->
+<!--    <bean id = "Phone2" class="org.genspark.Phone">-->
+<!--        <property name="mobile" value="555-555-0000"/>-->
+<!--    </bean>-->
+
+
+</beans>
