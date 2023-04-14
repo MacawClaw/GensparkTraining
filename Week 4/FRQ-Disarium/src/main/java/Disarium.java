@@ -6,7 +6,7 @@ public class Disarium {
 
     //Answer to Free Response Question
     //By Omar Garcia
-    
+
     public static void main(String[] args) {
 
         //Check each number until the array is full
