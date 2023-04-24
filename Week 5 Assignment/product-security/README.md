@@ -65,7 +65,7 @@ an ADMIN. Otherwise you can only read the information.
 
 Here are the links for basic CRUD operations where the Universal Product Number (UPC)
 serves as an id. Product Objects also contain a Product Name, Manufacturer, Price,
-and Description. #### NOTE: Prices are in BigDecimal for the purposes of financial math. 
+and Description. NOTE: Prices are in BigDecimal for the purposes of financial math. 
 Has no bearing on the entry of information, but important to note nonetheless.
 
 http://localhost:9080/api/v1/products (for Create, Read, Update)
