@@ -95,3 +95,16 @@ You can also update products as such:
 "description": "The Apex 7 keyboard has mechanical switches guaranteed for 50 million keypresses. Has blue switches."
 }
 ```
+
+## Acknowledgements
+
+Special Thanks to Amigoscode for his amazing tutorial:
+
+https://www.youtube.com/watch?v=KxqlJblhzfI
+
+And I referenced this page in adding the Role authorizations: 
+
+https://www.baeldung.com/spring-security-check-user-role
+
+##### Note: @EnableGlobalMethodSecurity is deprecated, used @EnableMethodSecurity
+
