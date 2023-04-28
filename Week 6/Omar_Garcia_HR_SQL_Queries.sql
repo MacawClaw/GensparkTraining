@@ -1,3 +1,4 @@
+/*Inserting Values*/
 Insert into regions(region_name)
 values ('North America'),
 ('Cerntal America and Carribean'),
@@ -50,6 +51,10 @@ values ('Drew','Burnham','mb123@gmail.com','(682) 555-5555','2020-08-01', 1, 250
 ('Anita','Oswald','ao72@gmail.com','(905) 555-5555','2018-06-08', 3, 35000, 2, 2, 10);
 
 Insert into job_history(employee_id, start_date, end_date, job_id, department_id)
+values (1, '2020-08-01', null, 1,1);
+
+Truncate table job_history;
+Insert into job_history(employee_id, start_date, end_date, job_id, department_id)
 values (1, '2020-08-01', null, 1,1),
 (2, '2014-09-20', '2020-05-17', 2, 2),
 (2, '2020-05-18', null, 5, 1),
@@ -62,12 +67,15 @@ values (1, '2020-08-01', null, 1,1),
 (7,'2018-06-08','2019-05-10',1,9),
 (7,'2019-05-11', null,3,10);
 
+/*Completing Main Assignment Objectives, Utilizes Joins*/
+
 /*Write a SQL query to find the first name, last name, 
 department number, and department name for each employee. */
 Create view employee_department as
-select employees.first_name, employees.last_name, employees.department_id, departments.department_name
-from employees, departments
-where employees.department_id = departments.department_id;
+(select employees.first_name, employees.last_name, employees.department_id, departments.department_name
+from employees
+left join departments
+on employees.department_id = departments.department_id);
 
 /*Write a SQL query to find the first name, last name,
  department, city, and state province for each employee */
@@ -79,16 +87,25 @@ where departments.location_id = locations.location_id and employees.department_i
 /*Write a SQL query to find the first name, last name, 
 salary, and job title for all employees. */
 Create view employee_title as
-select employees.first_name, employees.last_name, employees.salary, jobs.job_title
-from employees, jobs
-where employees.job_id = jobs.job_id;
+(select employees.first_name, employees.last_name, employees.salary, jobs.job_title
+from employees 
+right join jobs
+on employees.job_id = jobs.job_id);
 
 /*Write a SQL query to find all those employees who work in department ID 20 or 10. 
-Return first name, last name, department id and department name. */
-Create view employee_department as
-select employees.first_name, employees.last_name, employees.department_id, departments.department_name
-from employees, departments
-where employees.department_id = departments.department_id;
+Return first name, last name, department id and department name.*/
+Create view employee_department_ten as
+(select employees.first_name, employees.last_name, employees.department_id, departments.department_name
+from employees
+inner join departments
+on employees.department_id = departments.department_id);
+Select * from employee_department where department_id = 10;
 
-Delete from locations where location_id = 3;
+/*More Queries that employ the rest of the clauses and key words*/
+Select * from employee_title order by salary;
+-- Select first_name, count(*) from employees group by department_id;
+Select distinct first_name from employees;
+
+Select job_id, Count(employee_id) as Number_of_Employees_who_held_the_position from job_history group by job_id;
+Delete from job_history where employee_id = 2 and start_date = '2014-09-20';
 Update jobs set job_title = 'Department Manager' where job_title = 'Manager';
