@@ -1,0 +1,73 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: 'omar-zip-assignment
+
+  Sample SAM Template for omar-zip-assignment
+
+  '
+Globals:
+  Function:
+    Timeout: 20
+    MemorySize: 512
+Resources:
+  ListFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: ListFunction
+      Handler: com.omar.users.ListFunction::handleRequest
+      Runtime: java17
+      Events:
+        HelloWorld:
+          Type: Api
+          Properties:
+            Path: /users
+            Method: get
+    Metadata:
+      SamResourceId: ListFunction
+  GetFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: GetFunction
+      Handler: com.omar.users.GetFunction::handleRequest
+      Runtime: java17
+      Events:
+        HelloWorld:
+          Type: Api
+          Properties:
+            Path: /users/{userId}
+            Method: get
+    Metadata:
+      SamResourceId: GetFunction
+  PostFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: PostFunction
+      Handler: com.omar.users.PostFunction::handleRequest
+      Runtime: java17
+      Events:
+        HelloWorld:
+          Type: Api
+          Properties:
+            Path: /users
+            Method: post
+    Metadata:
+      SamResourceId: PostFunction
+  PutFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: PutFunction
+      Handler: com.omar.users.PutFunction::handleRequest
+      Runtime: java17
+      Events:
+        HelloWorld:
+          Type: Api
+          Properties:
+            Path: /users/{userId}
+            Method: put
+    Metadata:
+      SamResourceId: PutFunction
+Outputs:
+  UsersApi:
+    Description: API Gateway endpoint URL for Prod stage for Hello World function
+    Value:
+      Fn::Sub: https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/users/
