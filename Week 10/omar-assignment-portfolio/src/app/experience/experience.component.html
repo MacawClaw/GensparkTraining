@@ -1,32 +1,40 @@
-<div class="portfolio">
-  <div class = "portfolio-padding">
+<!-- EXPERIENCE SECTION -->
     
-    <div class="Basic-Info">
-      <div class="name">
-        <h1>Omar Garcia</h1>
-      </div>
-
-      <div class="github">
-        <h2>https://github.com/MacawClaw</h2>
-      </div>
+<div class="Experience">
+    <div class="section">
+      <h2>Experience</h2>
+      <hr>
     </div>
 
-    <!-- EXPERIENCE SECTION -->
-    
-    <div class="Experience">
-      <div class="section">
-        <h2>Experience</h2>
-        <hr>
-      </div>
-
-      <div class="job">
+    <div class="job" *ngFor="let experience of experiences">
         <div class="job-title">
-          <h3>Java Full Stack Developer at GenSpark</h3>
-          <p>Sept 2020 – Mar 2022</p>
+            <h3>{{ experience.name }}</h3>
+            <p>{{ experience.date }}</p>
         </div>
 
         <div class="description">
-          <ul>
+            <ul>
+            <li *ngFor="let descriptor of experience.descriptors">{{ descriptor }}</li>
+            </ul>
+        </div>
+    </div>
+  </div>
+
+
+
+
+
+
+<!-- Legacy Code kept for reference -->
+
+<!-- <div class="job">
+        <div class="job-title">
+            <h3>Java Full Stack Developer at GenSpark</h3>
+            <p>Sept 2020 – Mar 2022</p>
+        </div>
+
+        <div class="description">
+            <ul>
             <li>Completed all Java assignments and projects using - Loops, Arrays, Collections, Classes, OOP, Exceptions, IO Files, Functional Programming, and TDD.</li>
             <li>Leveraged sound coding practices by implementing small manageable testable methods, good descriptive commenting, and using version control.</li>
             <li>Implemented Test Driven Development while learning Unit Testing with JUnit and Java.</li>
@@ -37,150 +45,111 @@
             <li>Built several full stack projects using Java, Spring Boot, Hibernate, MySQL, and Angular.</li>
             <li>Completed an AWS Module to learn the fundamentals of Containers, EC2, S3, Lambda, Cloud Watch, Storage and Security.</li>
             <li>Underwent intense testing during and after the training using an AI proctored assessment tool.</li>
-          </ul>
+            </ul>
         </div>
-      </div>
+        </div>
 
-      <div class="job">
+        <div class="job">
         <div class="job-title">
-          <h3>Cloud Data Engineer Intern at Prime Therapeutics</h3>
-          <p>Jul 2022 – Dec 2022</p>
+            <h3>Cloud Data Engineer Intern at Prime Therapeutics</h3>
+            <p>Jul 2022 – Dec 2022</p>
         </div>
 
         <div class="description">
-          <ul>
+            <ul>
             <li>Provided support to Enterprise users who are responsible for processing and paying out prescription drug claims.</li>
             <li>Deployed, tested, and debugged sets of tasks for compiling data in various test environments in Google Cloud Platform before rolling out tools to the greater company.</li>
             <li>Met and collaborated with project managers/owners (enterprise users) on implementing wider system changes.</li>
-          </ul>
-      </div>
+            </ul>
+        </div>
+        </div>
 
-      <div class="job">
+        <div class="job">
         <div class="job-title">
-          <h3>Software Developer Trainee at Dev10 (by Genesis10)</h3>
-          <p>Mar 2022 – Jul 2022</p>
+            <h3>Software Developer Trainee at Dev10 (by Genesis10)</h3>
+            <p>Mar 2022 – Jul 2022</p>
         </div>
 
         <div class="description">
-          <ul>
+            <ul>
             <li>Chosen for highly selective, paid Dev10 training program - less than 5% of applicants are hired.</li>
             <li>Training in Java/JavaScript Development and associated tools.</li>
-          </ul>
+            </ul>
         </div>
-      </div>
+        </div>
 
-      <div class="job">
+        <div class="job">
         <div class="job-title">
-          <h3>Customer Service Representative at Micro Center</h3>
-          <p>Sept 2020 – Mar 2022</p>
+            <h3>Customer Service Representative at Micro Center</h3>
+            <p>Sept 2020 – Mar 2022</p>
         </div>
 
         <div class="description">
-          <ul>
+            <ul>
             <li>Provided speedy service to customers in the checkout area.</li>
             <li>Answered customer questions and directed them to the best solution.</li>
             <li>Retrieved and checked out internet orders for customers.</li>
-          </ul>
+            </ul>
         </div>
-      </div>
+        </div>
 
-      <div class="job">
+        <div class="job">
         <div class="job-title">
-          <h3>Student Computing Consultant at Office of Information Technology</h3>
-          <p>May 2019 – May 2020</p>
+            <h3>Student Computing Consultant at Office of Information Technology</h3>
+            <p>May 2019 – May 2020</p>
         </div>
 
         <div class="description">
-          <ul>
+            <ul>
             <li>Assisted students, faculty, and staff with printing, network connectivity, and account management.</li>
             <li>Backed up and Restored data from hard drives on damaged computers.</li>
             <li>Cataloged work orders to ensure timely service and delivery.</li>
             <li>Inspected AV equipment and virtual machines across campus for proper functioning.</li>
-          </ul>
+            </ul>
         </div>
-      </div>
+        </div>
 
-      <div class="job">
+        <div class="job">
         <div class="job-title">
-          <h3>Analysis of Exoplanet Detection at Rice University</h3>
-          <p>Aug 2019 – Apr 2020</p>
+            <h3>Analysis of Exoplanet Detection at Rice University</h3>
+            <p>Aug 2019 – Apr 2020</p>
         </div>
 
         <div class="description">
-          <ul>
+            <ul>
             <li>Analyzed data discerning planetary objects around young stars.</li>
             <li>Developed algorithms for inspecting stellar properties in Python.</li>
             <li>Used characteristics of star systems to inform models of planet formation.</li>
-          </ul>
+            </ul>
         </div>
-      </div>
+        </div>
 
-      <div class="job">
+        <div class="job">
         <div class="job-title">
-          <h3>Circulation Assistant at Fondren Library</h3>
-          <p>Aug 2017 – May 2019</p>
+            <h3>Circulation Assistant at Fondren Library</h3>
+            <p>Aug 2017 – May 2019</p>
         </div>
 
         <div class="description">
-          <ul>
+            <ul>
             <li>Handle checking in/out of books, DVDs, microfilm, and supplemental materials.</li>
             <li>Located obscure print & digital materials in an efficient manner for library patrons.</li>
             <li>Collaborated with staff to reorganize library material and develop student events.</li>
-          </ul>
+            </ul>
         </div>
-      </div>
+        </div>
 
-      <div class="job">
+        <div class="job">
         <div class="job-title">
-          <h3>Data Analyst & Research Assistant at Rice University</h3>
-          <p>Jun 2017 – Aug 2018</p>
+            <h3>Data Analyst & Research Assistant at Rice University</h3>
+            <p>Jun 2017 – Aug 2018</p>
         </div>
 
         <div class="description">
-          <ul>
+            <ul>
             <li>Extracted and analyzed data from high-energy gamma ray experiments.</li>
             <li>Evaluated the effectiveness of a new apparatus designed for such high energy experiments.</li>
             <li>Prepared experiments and maintained communication between professor and laboratory regarding equipment failure.</li>
-          </ul>
+            </ul>
         </div>
-      </div>
-    </div>
-
-    <!-- SKILLS SECTION -->
-
-    <div class="Skills">
-
-      <div class="section">
-        <h2>Skills</h2>
-        <hr>
-      </div>
-
-      <p>Agile Development • Test Driven Development • Core Java • Spring • Spring Boot • MySQL • Hibernate •
-        Postman • Microservices • Rest APIs • HTML • CSS, TypeScript • Angular • AWS • Git • GitHub • Node.js • 
-        React • Google Cloud Platform (Queries & Deployment)• Microsoft Office & Teams • Google Drive • MATLAB • Python • Ubuntu • Linux</p>
-      
-    </div>
-
-    <!-- EDUCATION SECTION -->
-
-    <div class="Education">
-      
-      <div class="section">
-        <h2>Education</h2>
-        <hr>
-      </div>
-
-      <div class="degree">
-        <h3>B.S. in Astrophysics</h3>
-      </div>
-
-      <div class="university">
-        <h4>Rice University, May 2020</h4>
-      </div>
-      
-    </div>
-
-
-  </div>
-
-</div>
+        </div> -->

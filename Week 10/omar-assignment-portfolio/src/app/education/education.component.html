@@ -1,0 +1,40 @@
+<!-- EXPERIENCE & CERTIFICATION SECTION -->
+
+<div class="edu-container">
+    <div class="Education">
+        <div class = "degrees" *ngFor="let d of degrees">      
+           <div class="section">
+               <h2>Education</h2>
+               <hr>
+             </div>
+   
+           <div class="achievement">
+               <h3>{{ d.degree }}</h3>
+           </div>
+         
+           <div class="setting">
+               <h4>{{ d.setting }}</h4>  
+          </div>
+       </div>
+         
+   </div>
+     
+   <div class="Certifications">
+           
+       <div class="section">
+           <h2>Certifications</h2>
+           <hr>
+       </div>
+     
+       <div class = "achievement" *ngFor="let c of certifications">      
+           <div class="certification">
+               <h3>{{ c.certification }}</h3>
+           </div>
+         
+           <div class="setting">
+               <h4>{{ c.setting }}</h4>  
+          </div>
+       </div>
+       
+   </div>
+</div>

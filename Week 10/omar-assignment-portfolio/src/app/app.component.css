@@ -1,0 +1,96 @@
+.navigation-bar {
+    background-color: #2f3242;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .navigation-bar nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 900px;
+  }
+  
+  .nav-btn {
+    padding: 0 15px;
+  }
+  
+  .nav-btn a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .nav-btn a:hover {
+    color: #ffcc00;
+  }
+  
+  .nav-btn.active a {
+    color: #ffcc00;
+  }
+
+  .Title-and-Basic-Information {
+    color: #fff;
+    padding: 20px;
+  }
+  
+  .Basic-Info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .name {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .name h1 {
+    font-size: 28px;
+  }
+  
+  .github {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .github h2 {
+    font-size: 18px;
+  }
+
+  .github a:link {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .github a:visited {
+    color: purple;
+    text-decoration: none;
+  }
+  
+  .summary {
+    text-align: justify;
+    margin-bottom: 20px;
+  }
+  
+  .summary h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .summary p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .portfolio-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+  }
+  

@@ -1,0 +1,13 @@
+header {
+  background-color: #18bc9c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.btn-holder{
+  width: 700px;
+  align-items: left;
+}
+

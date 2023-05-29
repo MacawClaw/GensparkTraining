@@ -1,0 +1,14 @@
+<div class="add-skill">
+    <form *ngIf="showAddTask" class="add-form" (ngSubmit)= "onSubmit()">
+        <div class="form-control">
+            <label for="skill">Skill</label>
+            <input
+                type="text"
+                name="skill"
+                [(ngModel)]="skill"
+                id="skill"
+                placeholder="Add Skill"/>
+        </div>
+          <input type="submit" value="Save Task" class="btn btn-block" />
+    </form>
+</div>
