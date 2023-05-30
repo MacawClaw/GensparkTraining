@@ -7,3 +7,15 @@
     margin-bottom: 40px;
 }
 
+.achievement-c,
+.image-col {
+    float: left;
+}
+
+.achievement-c {
+    width: 75%;
+}
+
+.image-col {
+    width: 25%;
+}
