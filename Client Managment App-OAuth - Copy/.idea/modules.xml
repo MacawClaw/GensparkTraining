@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Client Managment App-OAuth - Copy.iml" filepath="$PROJECT_DIR$/.idea/Client Managment App-OAuth - Copy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OAuth2/OAuth2.iml" filepath="$PROJECT_DIR$/OAuth2/OAuth2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spring-Security-Client/Spring-Security-Client.iml" filepath="$PROJECT_DIR$/Spring-Security-Client/Spring-Security-Client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clientmanagement/client-management.iml" filepath="$PROJECT_DIR$/clientmanagement/client-management.iml" />
+      <module fileurl="file://$PROJECT_DIR$/configserver/config-server.iml" filepath="$PROJECT_DIR$/configserver/config-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/organizationmanagement/organization-management.iml" filepath="$PROJECT_DIR$/organizationmanagement/organization-management.iml" />
+      <module fileurl="file://$PROJECT_DIR$/projectmanagement/project-management.iml" filepath="$PROJECT_DIR$/projectmanagement/project-management.iml" />
+      <module fileurl="file://$PROJECT_DIR$/serviceregistry/service-registry.iml" filepath="$PROJECT_DIR$/serviceregistry/service-registry.iml" />
+    </modules>
+  </component>
+</project>
